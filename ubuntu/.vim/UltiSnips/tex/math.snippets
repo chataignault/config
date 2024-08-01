@@ -1,0 +1,23 @@
+# check if math mode 
+#global !p
+#def math():
+#	return vim.eval('vimtex#syntax#in_mathzone()' == '1'
+#endglobal
+
+#context "math()" 
+snippet frac "New fraction" i
+\frac{$1}{$2} $0
+endsnippet
+
+snippet teg  "New integral" i
+\int_{$1}^{$2} $0
+endsnippet
+
+snippet sca "New scalar product" i
+\langle $1 | $2 \ranle $0
+endsnippet
+
+snippet exp "Expectation" i
+\mathbb{E} \left[ $1 \right] $0
+endsnippet
+
