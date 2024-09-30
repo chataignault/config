@@ -16,12 +16,11 @@ syntax enable
 
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
-let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_automatic = 1
 
-" Or with a generic interface:
-"let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
-let g:tex_flavor='latex'
+let g:vimtex_log_verbose = 1
 
 
 set conceallevel=1
@@ -32,12 +31,27 @@ let g:tex_conceal='abdmg'
 " want another compiler backend, you can change it as follows. The list of
 " supported backends and further explanation is provided in the documentation,
 " see ":help vimtex-compiler".
-let g:vimtex_compiler_progname='latexmk'
+let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_compiler_latexmk = {
+    \ 'build_dir' : '',
+    \ 'callback' : 1,
+    \ 'continuous' : 1,
+    \ 'executable' : 'latexmk',
+    \ 'hooks' : [],
+    \ 'options' : [
+    \   '-pdf',
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \   '-shell-escape',  
+    \ ],
+    \}
 
+let g:vimtex_compiler_progname = 'vim'
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf = 'latexmk -pdf -f $*'
+
 set iskeyword+=:
 
 let maplocalleader = ","
