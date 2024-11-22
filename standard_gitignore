@@ -1,0 +1,12 @@
+
+*.txt
+*.parquet
+*.csv
+*.ipynb
+*.lock
+
+*credentials.yaml
+
+test
+data
+
