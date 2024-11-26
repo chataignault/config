@@ -33,8 +33,16 @@ uvp() {
 	source .venv/Scripts/activate
 	git init .
 	cp c:/code/config/python_gitignore ./.gitignore
-	# create remote branch
-	curl POST github.com/lchataignault/$1
+	curl -X POST \
+		-H "Authorization: Bearer $(cat c:/code/config/git_token)" \
+  		-H "Accept: application/vnd.github.v3+json" \
+  		https://api.github.com/user/repos \
+		-d '{"name": "'$1'","private":false}'
+	git add README.md
+	git commit -m "initial commit"
+	git branch -M main
+	git remote add origin git@github.com:chataignault/$1.git
+	git push --set-upstream origin main
 }
 
 rup() {
@@ -42,7 +50,16 @@ rup() {
 	cargo new $1
 	cd $1
 	git init .
-	# create git repo
+ 	curl -X POST \
+		-H "Authorization: Bearer $(cat c:/code/config/git_token)" \
+  		-H "Accept: application/vnd.github.v3+json" \
+  		https://api.github.com/user/repos \
+		-d '{"name": "'$1'","private":false}'
+	git add README.md
+	git commit -m "initial commit"
+	git branch -M main
+	git remote add origin git@github.com:chataignault/$1.git
+	git push --set-upstream origin main
 }
 
 syncf() {
