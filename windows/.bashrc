@@ -7,6 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 alias gc="git commit -m"
 alias ga="git add"
 alias gp="git push"
+alias gpl="git pull"
 alias gd="git diff"
 alias gs="git status"
 alias gl="git log --oneline"
@@ -16,6 +17,7 @@ alias grs="git restore --staged"
 alias uva="source .venv/Scripts/activate"
 alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
 alias ..="cd .."
+alias rf="ruff format"
 
 aliases() {
     echo "Current aliases:"
@@ -55,6 +57,7 @@ rup() {
   		-H "Accept: application/vnd.github.v3+json" \
   		https://api.github.com/user/repos \
 		-d '{"name": "'$1'","private":false}'
+	echo "# $1" > README.md
 	git add README.md
 	git commit -m "initial commit"
 	git branch -M main
