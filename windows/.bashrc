@@ -1,9 +1,21 @@
 
 export cimp="$HOME/Cours/Cours_Imperial"
+export dw="$HOME/Downloads"
 export PATH="/c/miniconda3/scripts:$PATH"
 export PATH="/c/Program Files/Microsoft VS Code/Microsoft VS Code/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
+# navigation
+alias ..="cd .."
+alias cod="cd /c/code/"
+alias ls='ls -F --color auto --show-control-chars'
+
+# fs
+alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
+alias etex="source extract_tex.sh"
+alias gat="source gather_pdf_notes.sh"
+
+# git
 alias gc="git commit -m"
 alias ga="git add"
 alias gp="git push"
@@ -14,12 +26,25 @@ alias gl="git log --oneline"
 alias gb="git branch -a"
 alias gr="git restore"
 alias grs="git restore --staged"
+
+# uv
 alias uva="source .venv/Scripts/activate"
-alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
-alias ..="cd .."
+alias uvs="uv sync"
+alias uvb="uv build"
+alias uvv="uv venv -p"
+
+# ruff
 alias rf="ruff format"
 
-aliases() {
+# s3
+alias ls3="aws s3 ls"
+alias cp3="aws s3 cp"
+
+# podman
+alias pb="podman build"
+alias pr="podman run"
+
+al() {
     echo "Current aliases:"
     echo "---------------"
     alias | sort | sed 's/alias //' | column -t -s '='
