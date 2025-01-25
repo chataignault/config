@@ -9,7 +9,7 @@ export NVM_DIR="$HOME/.nvm"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cod='cd /c/code/'
-alias ls='ls -F --color=auto --show-control-chars'
+alias ls='ls -Fa --color=auto --show-control-chars'
 alias c='clear'
 
 # fs
@@ -25,13 +25,14 @@ alias gp='git push'
 alias gpl='git pull'
 alias gd='git diff'
 alias grm='git remove --cached'
-alias gs='git status'
+alias gs='git status --short'
 alias gt='git stash'
 alias gtu='git stash --include-untracked'
 alias gl='git log --oneline'
 alias gb='git branch -a'
 alias gr='git restore'
 alias grs='git restore --staged'
+alias grb='git reset -i' # squash
 
 # uv
 alias uva='source .venv/Scripts/activate'
