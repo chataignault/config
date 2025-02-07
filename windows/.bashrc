@@ -11,6 +11,7 @@ alias ...='cd ../..'
 alias cod='cd /c/code/'
 alias ls='ls -Fa --color=auto --show-control-chars'
 alias c='clear'
+alias hn='hostname -I'
 
 # fs
 alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
@@ -50,6 +51,9 @@ alias cp3='aws s3 cp'
 # podman
 alias pb='podman build'
 alias pr='podman run'
+
+# tex
+alias pdfu='pdfunite'
 
 al() {
     echo 'Current aliases:'
