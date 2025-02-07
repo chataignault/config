@@ -72,14 +72,18 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
+al() {
+    echo 'Current aliases:'
+    echo '---------------'
+    alias | sort | sed 's/alias //' | column -t -s '='
+}
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias pls='podman image ls'
+alias hn='hostname -I'
 
 . "$HOME/.cargo/env"
 
