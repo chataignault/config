@@ -15,8 +15,9 @@ alias hn='hostname -I'
 
 # fs
 alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
-alias etex='source extract_tex.sh'
-alias gat='source gather_pdf_notes.sh'
+alias etex='source extract_tex.sh &'
+alias gat='source gather_pdf_notes.sh &'
+alias aln='rm $cimp/all_notes.pdf && pdfunite $cimp/all_notes/* $cimp/all_notes.pdf'
 
 # git
 alias gc='git commit -m'
