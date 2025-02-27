@@ -72,6 +72,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# cargo 
+alias ct='cargo test'
+alias cc='cargo check'
+alias cb='cargo build'
 
 al() {
     echo 'Current aliases:'

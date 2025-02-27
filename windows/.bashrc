@@ -47,6 +47,11 @@ alias uvv='uv venv -p'
 # ruff
 alias rf='ruff format'
 
+# cargo 
+alias ct='cargo test'
+alias cc='cargo check'
+alias cb='cargo build'
+
 # s3
 alias ls3='aws s3 ls'
 alias cp3='aws s3 cp'
