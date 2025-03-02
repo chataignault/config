@@ -92,6 +92,7 @@ alias cc='cargo check'
 alias cb='cargo build'
 
 # npm
+alias nps='npm start'
 alias npi='npm install'
 alias npp='npx prettier . -write'
 
