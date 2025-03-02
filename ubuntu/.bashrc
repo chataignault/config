@@ -91,6 +91,10 @@ alias ct='cargo test'
 alias cc='cargo check'
 alias cb='cargo build'
 
+# npm
+alias npi='npm install'
+alias npp='npx prettier . -write'
+
 al() {
     echo 'Current aliases:'
     echo '---------------'
