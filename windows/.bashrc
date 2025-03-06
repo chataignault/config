@@ -51,6 +51,8 @@ alias rf='ruff format'
 alias ct='cargo test'
 alias cc='cargo check'
 alias cb='cargo build'
+alias cr='cargo run'
+alias ca='cargo add'
 
 # s3
 alias ls3='aws s3 ls'
