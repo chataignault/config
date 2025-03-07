@@ -53,6 +53,9 @@ alias cc='cargo check'
 alias cb='cargo build'
 alias cr='cargo run'
 alias ca='cargo add'
+alias ci='cargo init'
+alias cbe='cargo bench'
+alias cf='cargo fmt'
 
 # s3
 alias ls3='aws s3 ls'
