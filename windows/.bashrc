@@ -47,6 +47,9 @@ alias uvv='uv venv -p'
 # ruff
 alias rf='ruff format'
 
+# rustup
+alias ru='rustup update'
+
 # cargo 
 alias ct='cargo test'
 alias cc='cargo check'
@@ -56,6 +59,7 @@ alias ca='cargo add'
 alias ci='cargo init'
 alias cbe='cargo bench'
 alias cf='cargo fmt'
+alias ccf='cargo clippy -fix'
 
 # s3
 alias ls3='aws s3 ls'
