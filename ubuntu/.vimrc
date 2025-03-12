@@ -2,7 +2,6 @@
 filetype plugin indent on
 syntax enable on
 
-
 set conceallevel=1
 set encoding=utf8
 
@@ -16,7 +15,7 @@ let g:UltiSnipsExpandTrigger='<c-e>'
 let g:UltiSnipsJumpForwardTrigger='<c-e>'
 let g:UltiSnipsJumpBackwardTrigger='<S-e>'
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-"let g:UltiSnipsSnippetDir=$HOME.'/.vim/UltiSnips'
+"let g:UltiSnipsSnippetDir=$HOME.'/.vim/UltiSnips'"
 let maplocalender=','
 
 let g:rustfmt_autosave=1
