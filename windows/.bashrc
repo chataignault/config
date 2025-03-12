@@ -11,7 +11,6 @@ alias ...='cd ../..'
 alias cod='cd /c/code/'
 alias ls='ls -Fa --color=auto --show-control-chars'
 alias c='clear'
-alias hn='hostname -I'
 
 # fs
 alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
@@ -60,6 +59,7 @@ alias ci='cargo init'
 alias cbe='cargo bench'
 alias cf='cargo fmt'
 alias ccf='cargo clippy -fix'
+alias cnt='cargo +nightly test'
 
 # s3
 alias ls3='aws s3 ls'
@@ -124,4 +124,9 @@ syncf() {
 	source synchronise_local.sh $@
 }
 
+pyt() {
+	# start pytorch environment
+	source activate pyt
+	tensorboard serve --logdir . &
+}
 

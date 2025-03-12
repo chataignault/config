@@ -60,6 +60,13 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ls='ls -Fa --color=auto --show-control-chars'
+alias c='clear'
+alias hn='hostname -I'
+
 # git
 alias gc='git commit -m'
 alias gcx='git commit --no-verify -m'
@@ -86,10 +93,29 @@ alias uvv='uv venv -p'
 # ruff
 alias rf='ruff format'
 
+# rustup
+alias ru='rustup update'
+
 # cargo 
 alias ct='cargo test'
 alias cc='cargo check'
 alias cb='cargo build'
+alias cr='cargo run'
+alias ca='cargo add'
+alias ci='cargo init'
+alias cbe='cargo bench'
+alias cf='cargo fmt'
+alias ccf='cargo clippy -fix'
+alias cnt='cargo +nightly test'
+
+# podman
+alias pb='podman build'
+alias pr='podman run'
+alias pls='podman image ls'
+
+
+# tex
+alias pdfu='pdfunite'
 
 # npm
 alias nps='npm start'
@@ -102,15 +128,6 @@ al() {
     alias | sort | sed 's/alias //' | column -t -s '='
 }
 
-# fs
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias pls='podman image ls'
-alias hn='hostname -I'
-
 . "$HOME/.cargo/env"
 
 eval "$(starship init bash)" 
-
-
