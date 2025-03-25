@@ -71,6 +71,7 @@ alias pr='podman run'
 
 # tex
 alias pdfu='pdfunite'
+alias vn='vim notes.tex'
 
 al() {
     echo 'Current aliases:'
