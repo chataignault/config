@@ -132,6 +132,9 @@ syncf() {
 pyt() {
 	# start pytorch environment
 	source activate pyt
-	tensorboard serve --logdir . &
+	if command -v tensorboard &>/dev/null
+	then 
+		tensorboard serve --logdir . &
+	fi
 }
 
