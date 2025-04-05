@@ -85,7 +85,7 @@ alias grs='git restore --staged'
 alias grb='git reset -i' # squash
 
 # uv
-alias uva='source .venv/Scripts/activate'
+alias uva='source .venv/bin/activate'
 alias uvs='uv sync'
 alias uvb='uv build'
 alias uvv='uv venv -p'
