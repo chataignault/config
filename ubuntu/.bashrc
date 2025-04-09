@@ -122,6 +122,9 @@ alias nps='npm start'
 alias npi='npm install'
 alias npp='npx prettier . -write'
 
+# ocaml
+eval $(opam env)
+
 al() {
     echo 'Current aliases:'
     echo '---------------'
