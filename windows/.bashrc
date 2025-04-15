@@ -1,4 +1,13 @@
 
+# shell parameters
+export LS_COLORS="di=1;35:*.pdf=41:*notes=45"
+
+if [ -f ~/.dircolors ]; then
+    eval "$(dircolors -b ~/.dircolors)"
+else
+    eval "$(dircolors -b)"
+fi
+
 # paths
 export cimp="$HOME/Cours/Cours_Imperial"
 export dw="$HOME/Downloads"
@@ -13,7 +22,7 @@ export RUST_BACKTRACE=0
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cod='cd /c/code/'
-alias ls='ls -Fa --color=auto --show-control-chars'
+alias ls='ls -haF --color=auto'
 alias c='clear'
 
 # fs
