@@ -86,6 +86,9 @@ alias pr='podman run'
 alias pdfu='pdfunite'
 alias vn='vim notes.tex'
 
+# monitoring : https://github.com/ClementTsang/bottom
+alias btm='btm --enable_gpu'
+
 al() {
     echo 'Current aliases:'
     echo '---------------'
