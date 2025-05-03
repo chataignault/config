@@ -68,8 +68,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # installation
+alias sau='sudo apt upgrade'
 alias sal='sudo apt list --installed'
-alias saar='sudo apt autoremove'
+alias saar='sudo apt autoremove' # --purge
 alias sar='sudo apt remove'
 alias sap='sudo apt purge'
 
