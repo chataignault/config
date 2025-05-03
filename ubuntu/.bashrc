@@ -98,6 +98,7 @@ alias gb='git branch -a'
 alias gr='git restore'
 alias grs='git restore --staged'
 alias grb='git reset -i' # squash
+alias gcl='git config --list'
 
 # uv
 alias uva='source .venv/bin/activate'
@@ -122,12 +123,12 @@ alias cbe='cargo bench'
 alias cf='cargo fmt'
 alias ccf='cargo clippy -fix'
 alias cnt='cargo +nightly test'
+. "$HOME/.cargo/env"
 
 # podman
 alias pb='podman build'
 alias pr='podman run'
 alias pls='podman image ls'
-
 
 # tex
 alias pdfu='pdfunite'
@@ -154,13 +155,12 @@ clean_cache() {
 		read -p "Do you want to clean cache ? " yn
 		case $yn in
 			[Yy]* ) sudo apt-get clean; break;;
-			[Nn]* ) exit;;
+			[Nn]* ) break;;
 			* ) echo "Either yes or no ";;
 		esac
 	done
 }
 
-
-# initialise environments
-. "$HOME/.cargo/env"
+# starship
 eval "$(starship init bash)" 
+
