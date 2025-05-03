@@ -67,6 +67,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# installation
+alias sal='sudo apt list --installed'
+alias saar='sudo apt autoremove'
+alias sar='sudo apt remove'
+alias sap='sudo apt purge'
+
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -134,12 +140,27 @@ alias npp='npx prettier . -write'
 # ocaml
 eval $(opam env)
 
+# functions : use 'declare -F' to list them
 al() {
     echo 'Current aliases:'
     echo '---------------'
     alias | sort | sed 's/alias //' | column -t -s '='
 }
 
-. "$HOME/.cargo/env"
+clean_cache() {
+	echo "Current cache size :"
+	sudo du -sh /var/cache/apt
+	while true; do
+		read -p "Do you want to clean cache ? " yn
+		case $yn in
+			[Yy]* ) sudo apt-get clean; break;;
+			[Nn]* ) exit;;
+			* ) echo "Either yes or no ";;
+		esac
+	done
+}
 
+
+# initialise environments
+. "$HOME/.cargo/env"
 eval "$(starship init bash)" 
