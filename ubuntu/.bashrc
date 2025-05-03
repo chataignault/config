@@ -72,7 +72,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ls='ls -Fa --color=auto --show-control-chars'
 alias c='clear'
-alias hn='hostname -I'
+alias hn='hostname -i' # show local IP
+alias hnc='hostnamectl'
+alias lsp='lspci' # print components
 
 # git
 alias gc='git commit -m'
