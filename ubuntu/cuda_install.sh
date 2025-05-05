@@ -21,7 +21,7 @@ install_cuda_toolkit_sdk() {
 	sudo apt-get updatesudo apt-get -y install cuda-toolkit-12-9
 }
 
-install_cuda_driver()  {
+install_cuda_compiler()  {
 	# including nvcc
 	sudo apt install nvidia-cuda-toolkit
 	echo $(which nvcc)
@@ -29,13 +29,29 @@ install_cuda_driver()  {
 }
 
 if command -v gcc &> /dev/null; then
+	# build basics installed
 	echo $(gcc --version)
+
 	if lspci | grep -i nvidia &> /dev/null; then
-		# build basics installed
-	
+		# GPU detected
+
+		# check for existing kernels
+		if lsmod | grep nvidia &> /dev/null; then
+			# try loading to kernel
+			sudo modprobe nvidia
+		else
+			# install default driver for computation
+			sudo ubuntu drivers --gpgpu install
+			sudo modprobe nvidia
+		fi
+		
 		install_cuda_toolkit_sdk
 
-		install_cuda_driver
+		install_cuda_compiler
+
+		if ! [ command -v nvidia-smi ] &> /dev/null; then
+			#
+		fi
 	else
 		echo "No CUDA-enabled GPU detected"
 	fi

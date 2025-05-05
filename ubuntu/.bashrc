@@ -73,15 +73,22 @@ alias sal='sudo apt list --installed'
 alias saar='sudo apt autoremove' # --purge
 alias sar='sudo apt remove'
 alias sap='sudo apt purge'
+alias dpkg='dpkg'
+
+# device
+alias lsp='lspci' # print components
+alias lsmod='lsmod' # kernel modules status
+alias dmesg='dmesg' # kernel buffer logs
+alias modprobe='modprobe' # add and remove modules from linux kernel
+alias hn='hostname -i' # show local IP
+alias hnc='hostnamectl'
 
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ls='ls -Fa --color=auto --show-control-chars'
+alias ls='ls -Fa --color=auto --show-control-chars --group-directories-first'
 alias c='clear'
-alias hn='hostname -i' # show local IP
-alias hnc='hostnamectl'
-alias lsp='lspci' # print components
+alias reboot='reboot'
 
 # git
 alias gc='git commit -m'
@@ -142,7 +149,7 @@ alias npp='npx prettier . -write'
 # ocaml
 eval $(opam env)
 
-# functions : use 'declare -F' to list them
+# functions : use 'declare -F' to list 
 al() {
     echo 'Current aliases:'
     echo '---------------'
