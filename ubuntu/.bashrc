@@ -82,6 +82,7 @@ alias dmesg='dmesg' # kernel buffer logs
 alias modprobe='modprobe' # add and remove modules from linux kernel
 alias hn='hostname -i' # show local IP
 alias hnc='hostnamectl'
+alias systelctl='systemctl' # systemd service manager
 
 # navigation
 alias ..='cd ..'
@@ -89,6 +90,9 @@ alias ...='cd ../..'
 alias ls='ls -Fa --color=auto --show-control-chars --group-directories-first'
 alias c='clear'
 alias reboot='reboot'
+
+export cod='~/code'
+export art='~/cours/Articles'
 
 # git
 alias gc='git commit -m'

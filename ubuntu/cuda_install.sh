@@ -43,6 +43,7 @@ if command -v gcc &> /dev/null; then
 			# install default driver for computation
 			sudo ubuntu drivers --gpgpu install
 			sudo modprobe nvidia
+			# reboot and confirm MOK enrollment 
 		fi
 		
 		install_cuda_toolkit_sdk
@@ -50,7 +51,7 @@ if command -v gcc &> /dev/null; then
 		install_cuda_compiler
 
 		if ! [ command -v nvidia-smi ] &> /dev/null; then
-			#
+			# should be installed by the driver
 		fi
 	else
 		echo "No CUDA-enabled GPU detected"
