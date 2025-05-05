@@ -41,6 +41,7 @@ if command -v gcc &> /dev/null; then
 			sudo modprobe nvidia
 		else
 			# install default driver for computation
+			sudo ubuntu-drivers --gpgpu list
 			sudo ubuntu drivers --gpgpu install
 			sudo modprobe nvidia
 			# reboot and confirm MOK enrollment 
