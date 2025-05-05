@@ -14,7 +14,8 @@ Share local config accross instances.
 
 **Shell :**
 - https://linuxize.com/
-
+- https://starship.rs/
+	
 **Guidelines :**
 - https://kidger.site/thoughts/just-know-stuff/
 
