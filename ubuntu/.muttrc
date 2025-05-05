@@ -1,0 +1,27 @@
+unset use_domain 
+set realname = "Leon Chataignault"
+set from = "name@orange.fr"                                # complete
+set use_from = yes
+set timeout = 10
+set sort = threads
+# ================  IMAP ====================
+set imap_user = name@orange.fr                             # complete
+set imap_pass =                                            # complete
+set spoolfile = imaps://imap.orange.fr/INBOX
+set folder = imaps://imap.orange.fr/
+set record="imaps://imap.orange.fr/[Orange]/Sent Mail"
+set postponed="imaps://imap.gmail.com/[Orange]/Drafts"
+set mbox="imaps://imap.orange.fr/[Orange]/All Mail"
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+# ================  SMTP  ====================
+set smtp_url = "smtp://namet@orange.fr@smtp.orange.fr:587" # complete
+set smtp_pass = $imap_pass
+set ssl_force_tls = yes # Require encrypted connection
+set ssl_starttls = yes
+# ================  Composition  ====================
+set editor = "vim"      # Set your favourite editor.
+set edit_headers = yes  # See the headers when editing
+set charset = UTF-8     # value of $LANG; also fallback for send_charset
+
