@@ -138,7 +138,7 @@ rup() {
 syncf() {
 	# synchronise folders
 	echo Synchronise $1 and $2 for extension $3
-	source synchronise_local.sh $@
+	source synchronise_local $@
 }
 
 pyt() {
