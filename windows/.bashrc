@@ -137,8 +137,20 @@ rup() {
 
 syncf() {
 	# synchronise folders
-	echo Synchronise $1 and $2 for extension $3
-	source synchronise_local $@
+	# https://github.com/chataignault/tasks/tree/main/synchronize_local
+	if [ $# -eq 0 ]
+	then 
+		echo Default update notes folder ? 
+		select yn in "Yes" "No"; do
+			case $yn in
+				Yes ) synchronize_local c:/code/latex/cimp $cimp tex; break;;
+				No ) break;;
+			esac
+		done
+	else
+		echo Synchronise $1 and $2 for extension $3
+		synchronize_local $@
+	fi
 }
 
 pyt() {
