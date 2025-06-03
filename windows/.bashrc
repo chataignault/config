@@ -13,6 +13,8 @@ export cimp="$HOME/Cours/Cours_Imperial"
 export dw="$HOME/Downloads"
 export PATH="/c/miniconda3/scripts:$PATH"
 export PATH="/c/Program Files/Microsoft VS Code/Microsoft VS Code/bin:$PATH"
+export PATH="/c/code/tasks/bin:$PATH"
+export PATH="~/.cargo/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 
 # defaults
