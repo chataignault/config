@@ -14,6 +14,8 @@ set encoding=utf8
 syntax on
 syntax enable
 
+
+" Vimtex
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
 let g:vimtex_view_general_viewer = 'SumatraPDF'
@@ -21,7 +23,6 @@ let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line 
 let g:vimtex_view_automatic = 1
 
 let g:vimtex_log_verbose = 1
-
 
 set conceallevel=1
 let g:tex_conceal='abdmg'
@@ -61,6 +62,8 @@ set packpath+=~/.vim
 set background=dark
 let g:one_dark_termcolors=16
 
+
+" Limelight
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
@@ -73,22 +76,21 @@ let g:limelight_conceal_guifg = '#777777'
 let g:limelight_default_coefficient = 0.7
 
 " Number of preceding/following paragraphs to include (default: 0)
-let g:limelight_paragraph_span = 1
+let g:limelight_paragraph_span = 0
 
-" Beginning/end of paragraph
-"   When there's no empty line between the paragraphs
-"   and each paragraph starts with indentation
-let g:limelight_bop = '^\s'
-let g:limelight_eop = '\ze\n^\s'
+" Beginning of paragraph = start of file OR after two empty lines
+let g:limelight_bop = '\%^.\|\n\n\n\zs.'
+" End of paragraph = before two empty lines OR end of file  
+let g:limelight_eop = '\ze\n\n\n\|.\ze\%$'
 
 " Highlighting priority (default: 10)
 "   Set it to -1 not to overrule hlsearch
 let g:limelight_priority = -1
 
 
+" Ultisnips
 let g:UltiSnipsExpandTrigger='<c-e>'
 let g:UltiSnipsJumpForwardTrigger='<c-e>'
 let g:UltiSnipsJumpBackwardTrigger='<S-e>'
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-
 
