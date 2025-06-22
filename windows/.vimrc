@@ -85,3 +85,10 @@ let g:limelight_eop = '\ze\n^\s'
 "   Set it to -1 not to overrule hlsearch
 let g:limelight_priority = -1
 
+
+let g:UltiSnipsExpandTrigger='<c-e>'
+let g:UltiSnipsJumpForwardTrigger='<c-e>'
+let g:UltiSnipsJumpBackwardTrigger='<S-e>'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
+
