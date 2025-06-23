@@ -1,6 +1,5 @@
 
 # shell parameters
-export LS_COLORS="di=1;35:*.pdf=41:*notes=45"
 
 if [ -f ~/.dircolors ]; then
     eval "$(dircolors -b ~/.dircolors)"
@@ -29,6 +28,7 @@ alias ...='cd ../..'
 alias cod='cd /c/code/'
 alias ls='ls -haF --color=auto'
 alias c='clear'
+alias w='which'
 
 # fs
 alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
