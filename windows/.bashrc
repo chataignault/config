@@ -16,8 +16,6 @@ export PATH="/c/code/tasks/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
 export PATH="$PATH:/c/msys64/usr/bin"
 export NVM_DIR="$HOME/.nvm"
-export PYTHONHOME="/c/msys64/usr"
-export PYTHONPATH="/c/msys64/usr/lib/python3.12"
 
 # defaults
 export RUST_BACKTRACE=0

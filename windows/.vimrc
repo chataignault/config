@@ -89,6 +89,8 @@ let g:limelight_priority = -1
 
 
 " Ultisnips
+let $PYTHONHOME = '/c/msys64/usr'
+let $PYTHONPATH = '/c/msys64/usr/lib/python3.12'
 let g:UltiSnipsExpandTrigger='<c-e>'
 let g:UltiSnipsJumpForwardTrigger='<c-e>'
 let g:UltiSnipsJumpBackwardTrigger='<S-e>'
