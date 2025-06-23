@@ -11,7 +11,7 @@ fi
 export cimp="$HOME/Cours/Cours_Imperial"
 export dw="$HOME/Downloads"
 export PATH="/c/miniconda3/scripts:$PATH"
-export PATH="/c/Program Files/Microsoft VS Code/Microsoft VS Code/bin:$PATH"
+export PATH="/c/Users/leonc/AppData/Local/Programs/Microsoft VS Code/bin:$PATH"
 export PATH="/c/code/tasks/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
 export PATH="$PATH:/c/msys64/usr/bin"
@@ -27,6 +27,7 @@ alias cod='cd /c/code/'
 alias ls='ls -haF --color=auto'
 alias c='clear'
 alias w='which'
+alias clipboard ='/dev/clipboard' # using cygwin
 
 # fs
 alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
