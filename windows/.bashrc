@@ -27,7 +27,8 @@ alias cod='cd /c/code/'
 alias ls='ls -haF --color=auto'
 alias c='clear'
 alias w='which'
-alias clipboard ='/dev/clipboard' # using cygwin
+alias clipboard='/dev/clipboard' # using cygwin
+alias tree='tree-rs' # https://github.com/sighol/tree-rs
 
 # fs
 alias unz="find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip {}"
