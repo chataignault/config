@@ -1,6 +1,8 @@
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
+PURPLE='\033[0;35m'
+NC='\033[0m'
 
 shopt -s cmdhist
 shopt -s histappend
@@ -171,5 +173,12 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+
+# Node.js Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
 
