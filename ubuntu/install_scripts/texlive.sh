@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://mgeier.github.io/latexmk.html
+
 # distribution
 if command -v latex > /dev/null 2>&1; then
 	echo "texlive already installed"
@@ -29,5 +31,10 @@ if ! command -v apt-file >/dev/null 2>&1; then
 	sudo apt install apt-file
 	sudo apt-file update
 	echo -e "${PURPLE}Run 'apt-file search package-name' to find missing tex package install${NC}\n"
+fi
+
+if ! [ -d ~/code/latex ]; then
+	echo -e "${PURPLE}Cloning latex repository${NC}"
+	git clone https://github.com/chataignault/latex ~/code/latex
 fi
 
