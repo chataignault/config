@@ -101,6 +101,7 @@ alias pls='podman image ls'
 
 # tex
 alias pdfu='pdfunite'
+alias texc='latexmk -C'
 
 # npm
 alias nps='npm start'
