@@ -1,3 +1,5 @@
+#!/bin/bash
+# https://nodejs.org/en/download/current
 
 if ! command -v nvm > /dev/null 2>&1; then
 	# Download and install nvm:
