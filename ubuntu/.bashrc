@@ -49,7 +49,6 @@ alias c='clear'
 alias reboot='reboot'
 
 export cod='~/code'
-export art='~/cours/Articles'
 
 # git
 alias gc='git commit -m'
