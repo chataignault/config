@@ -4,8 +4,8 @@
 
 set -e  # Exit on any error
 
-NEW_SWAP_FILE="/swapfile8.img"
-NEW_SWAP_SIZE="8G"
+NEW_SWAP_FILE="/swapfile.img"
+NEW_SWAP_SIZE="15G"
 
 # Check if running as root
 if [[ $EUID -ne 0 ]]; then
