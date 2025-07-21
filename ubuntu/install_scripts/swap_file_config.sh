@@ -1,6 +1,7 @@
 #!/bin/bash
 # Script to safely replace existing swap file with a larger 8GB swap file
 # https://askubuntu.com/questions/178712/how-to-increase-swap-space
+# https://askubuntu.com/questions/1041024/is-there-a-maximum-size-at-which-a-swap-file-can-function
 
 set -e  # Exit on any error
 
