@@ -22,5 +22,5 @@ fi
 
 # mount backup ntfs partition
 mkdir $BACKUP_FOLDER
-mount -t $PARTITION_NAME $BACKUP_FOLDER
+mount -t ntfs $PARTITION_NAME $BACKUP_FOLDER
 
