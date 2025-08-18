@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # https://stackoverflow.com/questions/134906/how-do-i-list-all-cron-jobs-for-all-users
+# https://askubuntu.com/questions/2368/how-do-i-set-up-a-cron-job
 
 # System-wide crontab file and cron job directory. Change these for your system.
 CRONTAB='/etc/crontab'
