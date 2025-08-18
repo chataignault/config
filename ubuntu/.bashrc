@@ -14,6 +14,9 @@ shopt -s dotglob
 shopt -s expand_aliases
 shopt -u extglob
 
+# path extensions
+export PATH="$PATH:~/code/tasks/bin"
+
 # dircolors
 if [ -f ~/.dircolors ]; then
     eval "$(dircolors -b ~/.dircolors)"
@@ -49,6 +52,7 @@ alias c='clear'
 alias reboot='reboot'
 
 export cod='~/code'
+export art='~/cours/Articles'
 
 # git
 alias gc='git commit -m'
@@ -100,7 +104,6 @@ alias pls='podman image ls'
 
 # tex
 alias pdfu='pdfunite'
-alias texc='latexmk -C'
 
 # npm
 alias nps='npm start'
@@ -132,8 +135,6 @@ clean_cache() {
 
 # starship
 export STARSHIP_CONFIG=~/.config/starship.toml
-eval "$(starship init bash)" 
-
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -181,4 +182,6 @@ export NVM_DIR="$HOME/.nvm"
 # This loads nvm bash_completion
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
+
+. "$HOME/.local/bin/env"
 
