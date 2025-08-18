@@ -6,34 +6,24 @@
 
 # https://docs.nvidia.com/cuda/cuda-installation-guide-linux/
 
-install_cuda_toolkit_sdk() {
-	wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
-
-	sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
-
-	wget https://developer.download.nvidia.com/compute/cuda/12.9.0/local_installers/cuda-repo-ubuntu2204-12-9-local_12.9.0-575.51.03-1_amd64.deb
-
-	sudo dpkg -i cuda-repo-ubuntu2204-12-9-local_12.9.0-575.51.03-1_amd64.deb
-
-	# update public GPG keys 
-	sudo cp /var/cuda-repo-ubuntu2204-12-9-local/cuda-*-keyring.gpg /usr/share/keyrings/
-
-	sudo apt-get updatesudo apt-get -y install cuda-toolkit-12-9
-}
-
 install_cuda_compiler()  {
-	# including nvcc
-	sudo apt install nvidia-cuda-toolkit
-	echo $(which nvcc)
-	nvcc --version
+	if command -v nvcc &> /dev/null; then
+		echo "CUDA compiler (nvcc) already installed"
+		nvcc --version
+	else
+		# including nvcc
+		sudo apt install nvidia-cuda-toolkit
+		echo $(which nvcc)
+		nvcc --version
+	fi
 }
 
 if command -v gcc &> /dev/null; then
 	# build basics installed
 	echo $(gcc --version)
 
+	# search for a GPU
 	if lspci | grep -i nvidia &> /dev/null; then
-		# GPU detected
 
 		# check for existing kernels
 		if lsmod | grep nvidia &> /dev/null; then
@@ -42,22 +32,23 @@ if command -v gcc &> /dev/null; then
 		else
 			# install default driver for computation
 			sudo ubuntu-drivers --gpgpu list
-			sudo ubuntu drivers --gpgpu install
+			sudo ubuntu-drivers --gpgpu install
 			sudo modprobe nvidia
-			# reboot and confirm MOK enrollment 
+			# reboot and confirm MOK enrollment
+			echo "Reboot and check nvidia-smi command is available"
+			echo "If not, check modprobe command"
 		fi
 		
-		install_cuda_toolkit_sdk
-
 		install_cuda_compiler
-
+		
 		if ! [ command -v nvidia-smi ] &> /dev/null; then
 			# should be installed by the driver
+			echo "nvidia-smi not currently available"
 		fi
 	else
 		echo "No CUDA-enabled GPU detected"
 	fi
 else
-	echo "GCC not installed"
+	echo "GCC not installed, included in build-essential"
 fi
 
