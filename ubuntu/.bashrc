@@ -71,6 +71,7 @@ alias gr='git restore'
 alias grs='git restore --staged'
 alias grb='git rebase -i' # squash
 alias gcl='git config --list'
+alias gconfig='git config --list --show-origin'
 
 # uv
 alias uva='source .venv/bin/activate'

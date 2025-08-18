@@ -55,6 +55,7 @@ alias gb='git branch -a'
 alias gr='git restore'
 alias grs='git restore --staged'
 alias grb='git reset -i' # squash
+alias gconfig='git config --list --show-origin'
 
 # uv
 alias uva='source .venv/Scripts/activate'
