@@ -69,7 +69,7 @@ alias gl='git log --oneline'
 alias gb='git branch -a'
 alias gr='git restore'
 alias grs='git restore --staged'
-alias grb='git reset -i' # squash
+alias grb='git rebase -i' # squash
 alias gcl='git config --list'
 
 # uv
