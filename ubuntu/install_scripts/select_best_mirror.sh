@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# https://askubuntu.com/questions/913180/what-are-mirrors
+# https://linuxconfig.org/how-to-select-the-fastest-apt-mirror-on-ubuntu-linux
+
 # select best mirror with netselect
 
 if ! command -v netselect &> /dev/null; then
