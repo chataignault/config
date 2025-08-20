@@ -42,7 +42,13 @@ alias dmesg='dmesg' # kernel buffer logs
 alias modprobe='modprobe' # add and remove modules from linux kernel
 alias hn='hostname -i' # show local IP
 alias hnc='hostnamectl'
-alias systelctl='systemctl' # systemd service manager
+
+# systemd service manager
+export sysd="/etc/systemd/system" # service definitions
+alias sysdr='sudo systemctl daemon-reload'
+alias sysst='sudo systemctl start'
+alias sysin='sudo systemctl status'
+alias jctl='sudo journalctl'
 
 # navigation
 alias ..='cd ..'
