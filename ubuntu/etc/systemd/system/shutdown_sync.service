@@ -7,7 +7,7 @@ Conflicts=shutdown.target reboot.target halt.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/local/bin/backup_shutdown.sh
+ExecStart=/usr/local/bin/backup_shutdown.sh
 TimeoutStartSec=0
 
 [Install]
