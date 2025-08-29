@@ -1,11 +1,7 @@
 
 # CONSTANTS
-HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
-PURPLE='\033[0;35m'
-NC='\033[0m'
 export LC_COLLATE="C" # make dot-files and dot-folders appear first
+export SELECTED_EDITOR="/usr/bin/nvim"
 
 # SHELL PARAMETERS
 shopt -s cmdhist
@@ -17,6 +13,11 @@ shopt -s dirspell
 shopt -s dotglob
 shopt -s expand_aliases
 shopt -u extglob
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+PURPLE='\033[0;35m'
+NC='\033[0m'
 
 # PATH
 export PATH="$PATH:~/code/tasks/bin"
@@ -27,10 +28,6 @@ if [ -f ~/.dircolors ]; then
 else
     eval "$(dircolors -b)"
 fi
-
-# lesspipe
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
 
 # ALIASES
 # installation
@@ -159,6 +156,10 @@ fi
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
+
+# lesspipe
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 
 force_color_prompt=yes
 
