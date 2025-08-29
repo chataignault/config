@@ -1,15 +1,19 @@
 [Unit]
 Description=Update backup before shutdown
 DefaultDependencies=no
-Before=shutdown.target reboot.target halt.target
-Conflicts=shutdown.target reboot.target halt.target
+RequiresMountsFor=/mnt/backup
+After=multi-user.target
 
 [Service]
 Type=oneshot
+User=leonc
+Group=leonc
+WorkingDirectory=/home/leonc
+ExecStart=/bin/true
+ExecStop=/usr/local/bin/backup_shutdown.sh
 RemainAfterExit=yes
-ExecStart=/usr/local/bin/backup_shutdown.sh
-TimeoutStartSec=0
+TimeoutStopSec=90
+KillMode=none
 
 [Install]
-WantedBy=halt.target reboot.target shutdown.target
-
+WantedBy=multi-user.target
