@@ -1,9 +1,13 @@
+
+# CONSTANTS
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
 PURPLE='\033[0;35m'
 NC='\033[0m'
+export LC_COLLATE="C" # make dot-files and dot-folders appear first
 
+# SHELL PARAMETERS
 shopt -s cmdhist
 shopt -s histappend
 shopt -s checkwinsize
@@ -14,10 +18,10 @@ shopt -s dotglob
 shopt -s expand_aliases
 shopt -u extglob
 
-# path extensions
+# PATH
 export PATH="$PATH:~/code/tasks/bin"
 
-# dircolors
+# DIRCOLORS
 if [ -f ~/.dircolors ]; then
     eval "$(dircolors -b ~/.dircolors)"
 else
@@ -27,6 +31,8 @@ fi
 # lesspipe
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+
+# ALIASES
 # installation
 alias sau='sudo apt upgrade'
 alias sal='sudo apt list --installed'
@@ -120,6 +126,7 @@ alias npp='npx prettier . -write'
 # ocaml
 eval $(opam env)
 
+# FUNCTIONS
 # functions : use 'declare -F' to list 
 al() {
     echo 'Current aliases:'
@@ -140,7 +147,7 @@ clean_cache() {
 	done
 }
 
-# starship
+# STARSHIP
 export STARSHIP_CONFIG=~/.config/starship.toml
 
 # set variable identifying the chroot you work in (used in the prompt below)
@@ -181,7 +188,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-
 
 # Node.js Version Manager
 export NVM_DIR="$HOME/.nvm"
