@@ -4,6 +4,8 @@ After=multi-user.target
 
 [Service]
 Type=oneshot
+User=leonc
+Group=leonc
 ExecStart=/usr/local/bin/backup_startup.sh
 RemainAfterExit=yes
 
