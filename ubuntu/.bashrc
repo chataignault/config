@@ -52,16 +52,18 @@ alias sysdr='sudo systemctl daemon-reload'
 alias sysst='sudo systemctl start'
 alias sysin='sudo systemctl status'
 alias jctl='sudo journalctl'
+alias s='systemctl'
 
 # navigation
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ls='ls -Fa --color=auto --show-control-chars --group-directories-first'
 alias c='clear'
-alias reboot='reboot'
+alias z='zathura'
 
 export cod='~/code'
-export art='~/cours/Articles'
+export cimp='~/cours/Cours_Imperial'
+export pml='~/cours/Cours_Imperial/ML/Articles'
 
 # git
 alias gc='git commit -m'
