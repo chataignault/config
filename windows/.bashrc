@@ -24,7 +24,7 @@ export RUST_BACKTRACE=0
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cod='cd /c/code/'
-alias ls='ls -haF --color=auto'
+alias ls='ls -haF --color=auto --group-directories-first'
 alias c='clear'
 alias w='which'
 alias tree='tree-rs' # https://github.com/sighol/tree-rs
