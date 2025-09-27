@@ -21,6 +21,7 @@ NC='\033[0m'
 
 # PATH
 export PATH="$PATH:~/code/tasks/bin"
+export PATH="$PATH:/usr/local/go/bin"
 
 # DIRCOLORS
 if [ -f ~/.dircolors ]; then
