@@ -23,6 +23,7 @@ NC='\033[0m'
 export PATH="$PATH:~/code/tasks/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/home/leonc/go/bin"
+export PATH="$PATH:/home/leonc/.ghcup/bin"
 
 # DIRCOLORS
 if [ -f ~/.dircolors ]; then
