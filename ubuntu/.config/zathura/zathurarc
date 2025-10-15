@@ -1,0 +1,4 @@
+set recolor "true"
+set adjust-open "best-fit"
+set selection-clipboard clipboard
+set sandbox none
