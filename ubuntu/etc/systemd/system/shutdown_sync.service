@@ -13,8 +13,8 @@ WorkingDirectory=/home/leonc
 ExecStart=/bin/true
 ExecStop=/usr/local/bin/backup_shutdown.sh
 RemainAfterExit=yes
-TimeoutStopSec=90
-KillMode=none
+TimeoutStopSec=120
+KillMode=mixed
 
 [Install]
 WantedBy=multi-user.target
