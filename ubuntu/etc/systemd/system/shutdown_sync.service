@@ -3,6 +3,7 @@ Description=Update backup before shutdown
 DefaultDependencies=no
 RequiresMountsFor=/mnt/backup
 After=multi-user.target
+Before=umount.target
 
 [Service]
 Type=oneshot

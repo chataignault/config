@@ -1,15 +1,17 @@
 # Config
 
-Share local config accross instances.
+Share local config accross instances,
+to have uniform aliases, shortcuts and environment variables
+across platforms and devices.
 
 **Contains :**
-- shell parameters and aliases (bash)
-- default environment variables
-- workflow scripts
-- Vim config and snippets
-- configs for npm, podman, ocaml...
-- install scripts (cuda, ...)
-
+- dotfiles,
+- workflow scripts,
+- Vim configuration and snippets,
+- configuration for `npm`, `podman`, `ocaml`, ... ,
+- install scripts (`cuda`, ...),
+- configuration scripts (swap size, ...)
+- partition synchronization configuration (using `systemd` or `PolicyGroups`)
 
 ## References 
 
@@ -25,8 +27,7 @@ Share local config accross instances.
 - https://ejmastnak.com/tutorials/vim-latex/intro/
 - https://github.com/lervag/vimtex?tab=readme-ov-file#documentation
 
-## Ubuntu
-
+**Ubuntu mounts :**
 - Backup partition eventually mounted automatically during boot :
     - https://askubuntu.com/questions/164926/how-to-make-partitions-mount-at-startup
     - https://askubuntu.com/questions/22215/why-have-both-mnt-and-media
