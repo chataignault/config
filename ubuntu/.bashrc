@@ -20,7 +20,8 @@ PURPLE='\033[0;35m'
 NC='\033[0m'
 
 # PATH
-export PATH="$PATH:~/code/tasks/bin"
+export PATH="$PATH:~/code/tasks/bin/unix"
+export PATH="$PATH:~/code/tasks/bin/unix/todo"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/home/leonc/go/bin"
 export PATH="$PATH:/home/leonc/.ghcup/bin"
@@ -204,3 +205,4 @@ export NVM_DIR="$HOME/.nvm"
 
 . "$HOME/.local/bin/env"
 
+export BROWSER=/snap/bin/firefox
