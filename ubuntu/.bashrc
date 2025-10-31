@@ -67,6 +67,7 @@ alias z='zathura'
 
 export cod='~/code'
 export cimp='~/cours/Cours_Imperial'
+export bkp='/mnt/backup'
 export pml='~/cours/Cours_Imperial/ML/Articles'
 
 # git
