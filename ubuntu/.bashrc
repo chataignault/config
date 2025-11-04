@@ -148,7 +148,7 @@ alias gl='git log --oneline'
 alias gb='git branch -a'
 alias gr='git restore'
 alias grs='git restore --staged'
-alias grb='git rebase -i'
+alias grb='git rebase -i'                   # to squash minor commits together
 alias gcl='git config --list'
 alias gconfig='git config --list --show-origin'
 
@@ -225,6 +225,15 @@ alias pdfu='pdfunite'
 alias nps='npm start'
 alias npi='npm install'
 alias npp='npx prettier . -write'
+
+# ----------------------------------------------------------------------------
+# NVM - Node.js Version Manager
+# ----------------------------------------------------------------------------
+# Initialize NVM (manages multiple Node.js versions)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 
 # ============================================================================
 # OCAML DEVELOPMENT
@@ -314,19 +323,10 @@ xterm*|rxvt*)
     ;;
 esac
 
-# ----------------------------------------------------------------------------
-# NVM - Node.js Version Manager
-# ----------------------------------------------------------------------------
-# Initialize NVM (manages multiple Node.js versions)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # ============================================================================
 # FINAL INITIALIZATION
 # ============================================================================
 
-# Load local environment variables and additional configuration
+# Prepend .local/bin folder to PATH to prioritise over system binaries
 . "$HOME/.local/bin/env"
-
-
+# includes uv, uvx, harlequin, ...
