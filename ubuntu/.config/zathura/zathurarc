@@ -1,4 +1,19 @@
+# ========================================
+# Display & Appearance
+# ========================================
 set recolor "false"
+set recolor-keephue "true"
 set adjust-open "best-fit"
+
+# ========================================
+# Clipboard
+# ========================================
 set selection-clipboard clipboard
+
+# ========================================
+# Security
+# ========================================
+
+# enable following hyperlinks in the browser
 set sandbox none
+
