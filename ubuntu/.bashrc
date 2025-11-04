@@ -1,23 +1,51 @@
 
-# CONSTANTS
-export LC_COLLATE="C" # make dot-files and dot-folders appear first
-export SELECTED_EDITOR="/usr/bin/nvim"
+# ============================================================================
+# CORE SHELL CONFIGURATION
+# ============================================================================
 
-# SHELL PARAMETERS
-shopt -s cmdhist
-shopt -s histappend
-shopt -s checkwinsize
-shopt -s globstar
-shopt -s direxpand
-shopt -s dirspell
-shopt -s dotglob
-shopt -s expand_aliases
-shopt -u extglob
-HISTCONTROL=ignoreboth
-HISTSIZE=1000
-HISTFILESIZE=2000
-PURPLE='\033[0;35m'
-NC='\033[0m'
+# ----------------------------------------------------------------------------
+# ENVIRONMENT VARIABLES
+# ----------------------------------------------------------------------------
+export LC_COLLATE="C"              # Sort order: dotfiles first (affects ls, glob)
+export SELECTED_EDITOR="/snap/bin/nvim"  # Default editor for select-editor
+
+# ----------------------------------------------------------------------------
+# SHELL OPTIONS - COMMAND HISTORY
+# ----------------------------------------------------------------------------
+shopt -s cmdhist                   # Save multi-line commands as single history entry
+shopt -s histappend                # Append to history file, don't overwrite
+
+# ----------------------------------------------------------------------------
+# SHELL OPTIONS - TERMINAL BEHAVIOR
+# ----------------------------------------------------------------------------
+shopt -s checkwinsize              # Update LINES and COLUMNS after each command
+
+# ----------------------------------------------------------------------------
+# SHELL OPTIONS - GLOBBING (FILE PATTERN MATCHING)
+# ----------------------------------------------------------------------------
+shopt -s globstar                  # Enable ** recursive directory matching
+shopt -s direxpand                 # Expand directory names during tab completion
+shopt -s dirspell                  # Autocorrect minor spelling errors in cd commands
+shopt -s dotglob                   # Include hidden files in pathname expansion
+shopt -u extglob                   # Disable extended pattern matching (!(...), *(...), etc.)
+
+# ----------------------------------------------------------------------------
+# SHELL OPTIONS - ALIASES
+# ----------------------------------------------------------------------------
+shopt -s expand_aliases            # Enable alias expansion in non-interactive shells
+
+# ----------------------------------------------------------------------------
+# HISTORY CONFIGURATION
+# ----------------------------------------------------------------------------
+HISTCONTROL=ignoreboth             # Ignore duplicates and commands starting with space
+HISTSIZE=1000                      # Number of commands to keep in memory
+HISTFILESIZE=2000                  # Number of commands to keep in .bash_history file
+
+# ----------------------------------------------------------------------------
+# COLOR DEFINITIONS (ANSI ESCAPE CODES)
+# ----------------------------------------------------------------------------
+PURPLE='\033[0;35m'                # Purple color for terminal output
+NC='\033[0m'                       # No Color - reset to default
 
 # PATH
 export PATH="$PATH:~/code/tasks/bin/unix"
@@ -64,6 +92,8 @@ alias ...='cd ../..'
 alias ls='ls -Fa --color=auto --show-control-chars --group-directories-first'
 alias c='clear'
 alias z='zathura'
+alias n='nvim'
+alias v='nvim'
 
 export cod='~/code'
 export cimp='~/cours/Cours_Imperial'
