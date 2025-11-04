@@ -11,6 +11,7 @@ highlight SignColumn guibg=NONE ctermbg=NONE
 
 set conceallevel=1
 set encoding=utf8
+set clipboard=unnamedplus
 
 let g:vimtex_view_method='zathura'
 let g:tex_conceal='abdmg'
@@ -26,3 +27,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 let maplocalender=','
 
 let g:rustfmt_autosave=1
+
+let g:loaded_perl_provider=0
+let g:loaded_ruby_provider=0
+let g:loaded_node_provider=0
