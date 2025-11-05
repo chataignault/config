@@ -32,3 +32,9 @@ across platforms and devices.
     - https://askubuntu.com/questions/164926/how-to-make-partitions-mount-at-startup
     - https://askubuntu.com/questions/22215/why-have-both-mnt-and-media
 
+
+## Dependencies notes
+
+**Zellij :**
+- fonts-powerline (then reboot to enable)
+
