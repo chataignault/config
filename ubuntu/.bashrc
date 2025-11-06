@@ -118,6 +118,7 @@ alias ls='ls -Fa --color=auto --show-control-chars --group-directories-first'
 alias z='zathura'
 alias n='nvim'
 alias v='nvim'
+alias zj='zellij'
 
 # ----------------------------------------------------------------------------
 # Directory shortcuts
