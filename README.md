@@ -38,3 +38,9 @@ across platforms and devices.
 **Zellij :**
 - fonts-powerline (then reboot to enable)
 
+## Wish-list 
+
+<a href="https://github.com/anuraghazra/convoychat">
+<img height=40 align="center" src="https://go-skill-icons.vercel.app/api/icons?i=fedora,debian,kali" />
+</a>
+
