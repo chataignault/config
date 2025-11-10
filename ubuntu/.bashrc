@@ -48,6 +48,7 @@ alias saar='sudo apt autoremove' # --purge
 alias sar='sudo apt remove'
 alias sap='sudo apt purge'
 alias dpkg='dpkg'
+alias sha256sum='sha256sum'
 
 # device
 alias lsp='lspci' # print components
