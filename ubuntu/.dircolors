@@ -3,7 +3,19 @@ DIR 1;35
 
 *.pdf 41 
 *.gitignore 40
-*.bashrc 2;32
-*.vimrc 2;31
+*.bashrc 1;32
+*.vimrc 1;31
 *README.md 44
+*.tex 7;33
 
+# Latex related auxiliary files
+*.bbl 2;37
+*.bcf 2;37
+*.blg 2;37
+*.aux 2;37
+*.fdb_latexmk 2;37
+*.fls 2;37
+*.toc 2;37
+*.run.xml 2;37
+*.out 2;37
+*.synctex.gz 2;37
