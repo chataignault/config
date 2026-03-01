@@ -153,6 +153,8 @@ alias grs='git restore --staged'
 alias grb='git rebase -i'                   # to squash minor commits together
 alias gcl='git config --list'
 alias gconfig='git config --list --show-origin'
+alias gwt='git worktree'
+alias gsm='git submodule'
 
 # ============================================================================
 # PYTHON DEVELOPMENT
