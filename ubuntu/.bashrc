@@ -155,6 +155,7 @@ alias gcl='git config --list'
 alias gconfig='git config --list --show-origin'
 alias gwt='git worktree'
 alias gsm='git submodule'
+alias gbh='git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' --sort=committerdate' # last commiter for all branches
 
 # ============================================================================
 # PYTHON DEVELOPMENT
