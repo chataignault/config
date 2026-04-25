@@ -120,7 +120,7 @@ alias z='zathura'
 alias n='nvim'
 alias v='nvim'
 alias zj='zellij'
-alias eb='vim ~/.bashrc'
+alias eb='nvim ~/.bashrc'
 alias s='source ~/.bashrc'
 source /home/leonc/.config/broot/launcher/bash/br
 export PATH="$HOME/.local/bin:$PATH"
@@ -159,7 +159,7 @@ alias gcl='git config --list'
 alias gconfig='git config --list --show-origin'
 alias gwt='git worktree'
 alias gsm='git submodule'
-alias gbh='git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' --sort=committerdate' # last commiter for all branches
+alias gbh='git for-each-ref --format="%(committerdate) %09 %(authorname) %09 %(refname)" --sort=committerdate' # last commiter for all branches
 
 # ============================================================================
 # PYTHON DEVELOPMENT
