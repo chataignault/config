@@ -120,6 +120,10 @@ alias z='zathura'
 alias n='nvim'
 alias v='nvim'
 alias zj='zellij'
+alias eb='vim ~/.bashrc'
+alias s='source ~/.bashrc'
+source /home/leonc/.config/broot/launcher/bash/br
+export PATH="$HOME/.local/bin:$PATH"
 
 # ----------------------------------------------------------------------------
 # Directory shortcuts
@@ -328,10 +332,4 @@ xterm*|rxvt*)
     ;;
 esac
 
-# ============================================================================
-# FINAL INITIALIZATION
-# ============================================================================
 
-# Prepend .local/bin folder to PATH to prioritise over system binaries
-. "$HOME/.local/bin/env"
-# includes uv, uvx, harlequin, ...
